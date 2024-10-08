@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Shega/frontend-qa-selection/myapp/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
