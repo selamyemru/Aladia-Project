@@ -1,12 +1,19 @@
 <template>
-  <div class="login-page">
+  <div id="app">
+    <Login />
   </div>
 </template>
 
-<script>
+<script lang="js">
+import Login from './components/Login.vue';
+
 export default {
-  name: 'Login',
+  name: 'App',
+  components: {
+    Login
+  }
 }
 </script>
 
-
+<style>
+</style>
