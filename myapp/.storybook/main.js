@@ -6,7 +6,6 @@ const config = {
   ],
   addons: [
     "@storybook/addon-onboarding",
-    "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@chromatic-com/storybook",
     "@storybook/addon-interactions",
@@ -15,6 +14,5 @@ const config = {
     name: "@storybook/vue3-vite",
     options: {},
   },
-  docs: {}
 };
 export default config;

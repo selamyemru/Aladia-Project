@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/storybook'],
   storybook: {
-    host: 'http://localhost',
+    host: 'http://localhost:6006',
     // storybookRoute: '/__storybook__',
     port: 6006,
   },

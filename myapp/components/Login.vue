@@ -63,13 +63,10 @@ export default {
   name: 'LoginPage',
   methods: {
     handleSubmit() {
-      // Handle form submission
-      alert('Form submitted!'); // Replace with actual logic
+      alert('Form submitted!');
     }
   }
 }
 </script>
 
-<style scoped>
-/* Add any additional custom styles here */
-</style>
+
