@@ -1,10 +1,21 @@
-import LoginPage from '../components/Login.vue';
+// src/stories/LoginPage.stories.js
+
+import LoginPage from './Login.vue';
+import { action } from '@storybook/addon-actions';
 
 export default {
-  title: 'Components/Login',
+  title: 'Pages/LoginPage',
   component: LoginPage,
+  parameters: {
+    docs: {
+      description: {
+        component: 'The `LoginPage` component provides a user-friendly interface for logging in or creating an account. It supports email-based login and various social media integrations.',
+      },
+    },
+  },
 };
 
+// Template for rendering the LoginPage component
 const Template = (args) => ({
   components: { LoginPage },
   setup() {
@@ -13,47 +24,41 @@ const Template = (args) => ({
   template: '<LoginPage v-bind="args" />',
 });
 
+// Default variant showing standard usage
 export const Default = Template.bind({});
 Default.args = {
-  
+  // Add props like email and password here if applicable
+};
+Default.parameters = {
+  docs: {
+    storyDescription: 'Default usage of the LoginPage component.',
+  },
 };
 
-export const WithAlert = Template.bind({});
-WithAlert.args = {
-  handleSubmit: () => alert('Form submitted with alert!'), 
+// Mobile variant demonstrating responsiveness
+export const MobileVariant = Template.bind({});
+MobileVariant.args = {
+  // Include specific props for mobile view if necessary
 };
-// import LoginPage from '../components/Login.vue';
+MobileVariant.parameters = {
+  docs: {
+    storyDescription: 'Demonstrates the LoginPage component on mobile devices.',
+  },
+};
 
-// export default {
-//   title: 'Components/Login',
-//   component: LoginPage,
-//   parameters: {
-//     docs: {
-//       description: {
-//         component: 'The `LoginPage` component is a form used to authenticate users by collecting their credentials (username/email and password). It also supports validation and event handling for form submission.',
-//       },
-//     },
-//     decorators: [
-//       (story) => ({
-//         components: { story },
-//         template: '<div><story /></div>',
-//       }),
-//     ],
-//   },
-//   argTypes: {
-//     handleSubmit: {
-//       description: 'Function to handle form submission. This function is called when the form is submitted.',
-//       action: 'submitted',
-//       control: { type: 'function' },
-//       table: {
-//         category: 'Events',
-//       },
-//     },
-//   },
-// };
+// Variant showing the action on submit
+export const WithSubmitAction = Template.bind({});
+WithSubmitAction.args = {
+  handleSubmit: action('form-submitted'),
+};
+WithSubmitAction.parameters = {
+  docs: {
+    storyDescription: 'Shows how the component handles form submission.',
+  },
+};
 
-
-// export const Default = () => ({
-//   components: { LoginPage },
-//   template: '<LoginPage />',
-// });
+// Adding controls for interactive prop editing
+WithSubmitAction.argTypes = {
+  handleSubmit: { action: 'form-submitted' },
+  // Add other props for interactive controls if applicable
+};
