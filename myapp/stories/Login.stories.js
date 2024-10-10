@@ -1,64 +1,62 @@
 // src/stories/LoginPage.stories.js
-
-import LoginPage from './Login.vue';
-import { action } from '@storybook/addon-actions';
+import Login from './Login.vue'; // Adjust the path as needed
 
 export default {
-  title: 'Pages/LoginPage',
-  component: LoginPage,
+  title: 'Pages/Login', // Make sure this matches your expected path
+  component: Login,
   parameters: {
     docs: {
       description: {
-        component: 'The `LoginPage` component provides a user-friendly interface for logging in or creating an account. It supports email-based login and various social media integrations.',
+        component: `
+        ## Login Page Component
+
+        This component represents a login page for Aladia. It features fields for email input, 
+        social login buttons, and a terms & conditions link.
+
+        ### Variants
+
+        - **Default:** Standard login view.
+        - **Mobile View:** Optimized for mobile devices.
+        - **Desktop View:** Optimized for desktop screens.
+        `,
       },
     },
   },
 };
 
-// Template for rendering the LoginPage component
+// Template for creating stories
 const Template = (args) => ({
-  components: { LoginPage },
+  components: { Login },
   setup() {
     return { args };
   },
-  template: '<LoginPage v-bind="args" />',
+  template: '<Login v-bind="args" />',
 });
 
-// Default variant showing standard usage
+// Default Login Page
 export const Default = Template.bind({});
-Default.args = {
-  // Add props like email and password here if applicable
-};
-Default.parameters = {
-  docs: {
-    storyDescription: 'Default usage of the LoginPage component.',
+Default.args = {};
+
+// Mobile View
+export const MobileView = Template.bind({});
+MobileView.args = {};
+MobileView.parameters = {
+  viewport: {
+    defaultViewport: 'mobile1', // Adjust the viewport for mobile view
   },
 };
 
-// Mobile variant demonstrating responsiveness
-export const MobileVariant = Template.bind({});
-MobileVariant.args = {
-  // Include specific props for mobile view if necessary
-};
-MobileVariant.parameters = {
-  docs: {
-    storyDescription: 'Demonstrates the LoginPage component on mobile devices.',
+// Desktop View
+export const DesktopView = Template.bind({});
+DesktopView.args = {};
+DesktopView.parameters = {
+  viewport: {
+    defaultViewport: 'desktop1', // Adjust the viewport for desktop view
   },
 };
 
-// Variant showing the action on submit
+// Submit Action View (if needed)
 export const WithSubmitAction = Template.bind({});
 WithSubmitAction.args = {
-  handleSubmit: action('form-submitted'),
-};
-WithSubmitAction.parameters = {
-  docs: {
-    storyDescription: 'Shows how the component handles form submission.',
-  },
-};
-
-// Adding controls for interactive prop editing
-WithSubmitAction.argTypes = {
-  handleSubmit: { action: 'form-submitted' },
-  // Add other props for interactive controls if applicable
+  // Any specific args if you have
 };

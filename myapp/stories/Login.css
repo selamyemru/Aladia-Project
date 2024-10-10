@@ -1,0 +1,195 @@
+/* Login.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1a202c; /* Dark background for the whole page */
+  color: #e2e8f0; /* Light text for better readability */
+  height: 100%;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+.login-box {
+  background-color: #2d3748; /* Dark box background */
+  border-radius: 15px;
+  padding: 2.5rem; /* Increased padding for a better layout */
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem; /* Increased spacing for better separation */
+}
+
+.logo {
+  width: 80px; /* Increased logo size for better visibility */
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.login-title {
+  font-size: 2rem; /* Slightly larger title */
+  font-weight: 700; /* Bolder font weight */
+  color: #edf2f4; /* Lighter title color */
+}
+
+.login-subtitle {
+  color: #cbd5e0; /* Lighter subtitle color */
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  margin-bottom: 1.5rem; /* Increased margin for better spacing */
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #4a5568; /* Input border color */
+  border-radius: 0.375rem;
+  background-color: #2d3748; /* Dark input background */
+  font-size: 1rem;
+  color: #edf2f4; /* Input text color */
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #63b3ed; /* Focus border color */
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  background-color: #3182ce; /* Button background color */
+  color: white;
+  font-weight: 600; /* Increased font weight for emphasis */
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-color: #2b6cb0; /* Button hover color */
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.line {
+  height: 1px;
+  flex-grow: 1;
+  background-color: #4a5568; /* Separator line color */
+}
+
+.or-text {
+  margin: 0 1rem;
+  color: #cbd5e0; /* Text color */
+  font-size: 0.875rem;
+}
+
+.social-login-buttons .social-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  transition: background-color 0.3s ease;
+}
+
+.social-btn img.icon {
+  width: 20px;
+  margin-right: 0.5rem;
+}
+
+.social-btn.google {
+  background-color: #f7fafc; /* Google button background */
+  color: #333;
+  border: 1px solid #d1d5db;
+}
+
+.social-btn.google:hover {
+  background-color: #e2e8f0; /* Google button hover color */
+}
+
+.social-btn.facebook {
+  background-color: #4267B2; /* Facebook button background */
+  color: white;
+}
+
+.social-btn.facebook:hover {
+  background-color: #365899; /* Facebook button hover color */
+}
+
+.social-btn.apple {
+  background-color: #000; /* Apple button background */
+  color: white;
+}
+
+.social-btn.apple:hover {
+  background-color: #333; /* Apple button hover color */
+}
+
+.terms {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #cbd5e0; /* Terms text color */
+}
+
+.terms-link {
+  color: #63b3ed; /* Terms link color */
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline; /* Terms link hover effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 2rem; /* Adjust padding for mobile */
+  }
+  .login-title {
+    font-size: 1.75rem; /* Slightly smaller title on mobile */
+  }
+  .input-field, .submit-btn, .social-btn {
+    font-size: 0.875rem; /* Smaller font size on mobile */
+  }
+}
