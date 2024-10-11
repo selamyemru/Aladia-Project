@@ -1,0 +1,134 @@
+/* General container for centering the login box */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f7fa;
+  padding: 2rem;
+}
+
+/* Main login box styling */
+.login-box {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Login header styles for logo and titles */
+.login-header {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 1rem;
+}
+
+.login-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.login-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+}
+
+/* Form separator styles */
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.separator .line {
+  height: 1px;
+  width: 100%;
+  background: #e5e7eb;
+}
+
+.separator .or-text {
+  margin: 0 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Social login buttons styling */
+.social-login-buttons {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-btn:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.social-btn .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
+
+.social-btn.google {
+  color: #4285f4;
+}
+
+.social-btn.facebook {
+  color: #4267b2;
+}
+
+.social-btn.apple {
+  color: #000000;
+}
+
+/* Terms and Conditions link */
+.terms {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.terms-link {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.terms-link:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 640px) {
+  .login-box {
+    padding: 1.5rem;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+
+  .social-login-buttons {
+    grid-template-columns: 1fr;
+  }
+}

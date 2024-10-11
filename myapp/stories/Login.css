@@ -18,9 +18,9 @@ body, html {
 }
 
 .login-box {
-  background-color: #2d3748; /* Dark box background */
+  background-color: #121418; 
   border-radius: 15px;
-  padding: 2.5rem; /* Increased padding for a better layout */
+  padding: 2.5rem; 
   width: 100%;
   max-width: 400px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
@@ -34,29 +34,29 @@ body, html {
 
 .login-header {
   text-align: center;
-  margin-bottom: 2rem; /* Increased spacing for better separation */
+  margin-bottom: 2rem; 
 }
 
 .logo {
-  width: 80px; /* Increased logo size for better visibility */
+  width: 80px; 
   border-radius: 50%;
   margin-bottom: 1rem;
 }
 
 .login-title {
-  font-size: 2rem; /* Slightly larger title */
-  font-weight: 700; /* Bolder font weight */
-  color: #edf2f4; /* Lighter title color */
+  font-size: 2rem; 
+  font-weight: 700; 
+  color: #edf2f4; 
 }
 
 .login-subtitle {
-  color: #cbd5e0; /* Lighter subtitle color */
+  color: #cbd5e0; 
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 
 .input-group {
-  margin-bottom: 1.5rem; /* Increased margin for better spacing */
+  margin-bottom: 1.5rem; 
 }
 
 .input-wrapper {
@@ -71,26 +71,26 @@ body, html {
 }
 
 .input-field {
-  width: 100%;
+  width: 85%;
   padding: 0.75rem 1rem 0.75rem 2.5rem;
-  border: 1px solid #4a5568; /* Input border color */
+  border: 1px solid #4a5568; 
   border-radius: 0.375rem;
-  background-color: #2d3748; /* Dark input background */
+  background-color: #adaeb0; 
   font-size: 1rem;
-  color: #edf2f4; /* Input text color */
+  color: #edf2f4; 
   transition: border-color 0.3s ease;
 }
 
 .input-field:focus {
-  border-color: #63b3ed; /* Focus border color */
+  border-color: #63b3ed; 
   outline: none;
 }
 
 .submit-btn {
   width: 100%;
-  background-color: #3182ce; /* Button background color */
+  background-color: #3182ce; 
   color: white;
-  font-weight: 600; /* Increased font weight for emphasis */
+  font-weight: 600; 
   padding: 0.75rem;
   border-radius: 0.375rem;
   font-size: 1rem;
@@ -99,7 +99,7 @@ body, html {
 }
 
 .submit-btn:hover {
-  background-color: #2b6cb0; /* Button hover color */
+  background-color: #2b6cb0; 
 }
 
 .separator {
@@ -111,12 +111,12 @@ body, html {
 .line {
   height: 1px;
   flex-grow: 1;
-  background-color: #4a5568; /* Separator line color */
+  background-color: #4a5568; 
 }
 
 .or-text {
   margin: 0 1rem;
-  color: #cbd5e0; /* Text color */
+  color: #cbd5e0; 
   font-size: 0.875rem;
 }
 
