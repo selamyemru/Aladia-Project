@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'LoginPageTemplate',
+  name: 'LoginFormTemplate',
 };
 </script>

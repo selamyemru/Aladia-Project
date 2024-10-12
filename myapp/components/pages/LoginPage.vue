@@ -1,5 +1,5 @@
 <template>
-  <LoginPageTemplate>
+  <LoginFormTemplate>
     <div class="login-header text-center">
       <img src="/assets/images/logo.jpeg" alt="Aladia logo" class="logo mx-auto w-20 h-20" />
       <h1 class="login-title text-2xl font-bold text-gray-900 mt-4">Welcome to Aladia!</h1>
@@ -19,17 +19,17 @@
     <p class="terms text-center text-gray-500 text-sm mt-6">
       <a href="#" class="terms-link text-indigo-600 hover:underline">Terms & Conditions</a>
     </p>
-  </LoginPageTemplate>
+  </LoginFormTemplate>
 </template>
 
 <script>
-import LoginPageTemplate from '../templates/LoginPageTemplate.vue';
+import LoginFormTemplate from '../templates/LoginFormTemplate.vue';
 import LoginForm from '../organisms/LoginForm.vue';
 import SocialLoginSection from '../organisms/SocialLoginSection.vue';
 
 export default {
   name: 'LoginPage',
-  components: { LoginPageTemplate, LoginForm, SocialLoginSection },
+  components: { LoginFormTemplate, LoginForm, SocialLoginSection },
   methods: {
     handleSubmit() {
       alert('Form submitted!');

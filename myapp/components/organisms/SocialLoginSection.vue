@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import SocialLoginButton from '../../molecules/SocialLoginButton.vue';
+import SocialLoginButton from '../molecules/SocialLoginButton.vue';
 
 export default {
   name: 'SocialLoginSection',
