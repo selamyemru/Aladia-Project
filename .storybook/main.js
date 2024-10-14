@@ -1,6 +1,5 @@
 const config = {
   stories: [
-    "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   staticDirs: ["../public", "../assets"],
