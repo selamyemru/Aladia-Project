@@ -3,7 +3,6 @@ on:
   pull_request:
     branches:
       - "**"
-
 jobs:
   component_visual_regression:
     name: component_visual_regression
