@@ -10,6 +10,7 @@ describe('template spec', () => {
     cy.get('#email-field').clear('s');
     cy.get('#email-field').type('selamyemru6@gmail.com');
     cy.get('.gap-4 > .gradient').click({ force: true });
+    
     cy.get('#name').clear('selam');
     cy.get('#name').type('selam');
     cy.get('#surname').clear('yemru');
