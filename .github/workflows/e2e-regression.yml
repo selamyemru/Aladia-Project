@@ -44,6 +44,7 @@ jobs:
           done
 
       - name: Run Cypress Tests
-        run: pnpx cypress run --spec 'cypress/e2e/test2.cy.js'
+        run: |
+          ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpx cypress run --spec 'cypress/e2e/test2.cy.js'
         env:
           CYPRESS_RECORD_KEY: "chpt_47283b83342b338"  # Your Cypress Record Key
