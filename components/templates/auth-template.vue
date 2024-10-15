@@ -73,12 +73,11 @@ function handleLoginSubmit(email) {
     // If the user exists, proceed to password login
     authStage.value = "login-password";
   } else {
-    // If the user doesn't exist, go to the registration stage
+   
     authStage.value = "register";
   }
 }
 
-// Handle Password Submission (LoginPasswordCard)
 function handlePasswordSubmit(password) {
   const user = database.value.find(
     (user) => user.email === enteredEmail.value && user.password === password
