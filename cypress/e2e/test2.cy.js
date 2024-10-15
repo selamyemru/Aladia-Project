@@ -9,7 +9,7 @@ describe('template spec', () => {
     cy.visit('  http://localhost:3000/');
     cy.get('#email-field').clear('s');
     cy.get('#email-field').type('selamyemru6@gmail.com');
-    cy.get('.gap-4 > .gradient').click();
+    cy.get('.gap-4 > .gradient').click({ force: true });
     cy.get('#name').clear('selam');
     cy.get('#name').type('selam');
     cy.get('#surname').clear('yemru');
