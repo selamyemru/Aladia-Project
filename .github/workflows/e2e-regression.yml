@@ -1,0 +1,50 @@
+name: E2E Visual Regression Test
+
+on:
+  pull_request:
+    branches:
+      - "**"  # Triggers on any branch
+
+jobs:
+  e2e_visual_regression:
+    name: e2e_visual_regression
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install pnpm
+        run: |
+          npm install -g pnpm
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Build Application
+        run: pnpm build
+
+      - name: Start Application
+        run: pnpm start &
+        env:
+          PORT: 3000
+
+      - name: Wait for Application to Start
+        run: |
+          while ! nc -z localhost 3000; do   
+            sleep 1
+          done
+
+      - name: Run Cypress Tests
+        run: |
+          ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 pnpx cypress run --spec 'cypress/e2e/test2.cy.js'
+        env:
+          CYPRESS_RECORD_KEY: "chpt_47283b83342b338"  # Your Cypress Record Key
