@@ -13,11 +13,10 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Ensure full git history for Chromatic
 
       - name: Install pnpm
-        run: |
-          npm install -g pnpm
+        run: npm install -g pnpm
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -42,7 +41,16 @@ jobs:
             sleep 1
           done
 
-      - name: Run Cypress with Chromatic for E2E Tests
+      # Run Cypress tests
+      - name: Run Cypress Tests
+        run: pnpx cypress run --spec cypress/e2e/test.cy.js
+        env:
+          CYPRESS_RECORD_KEY: "chpt_47283b83342b338"  # Your Cypress Record Key
+          CHROMATIC_ARCHIVE_LOCATION: "/home/runner/work/Aladia-Project/Aladia-Project/cypress/e2e/test.cy.js"
+
+      # Now run Chromatic for visual regression tests
+      - name: Run Chromatic with Cypress E2E Tests
         run: ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 npx chromatic --cypress --project-token="chpt_47283b83342b338" --exit-zero-on-changes
         env:
           CYPRESS_RECORD_KEY: "chpt_47283b83342b338"
+          CHROMATIC_ARCHIVE_LOCATION: "/home/runner/work/Aladia-Project/Aladia-Project/cypress/e2e/test.cy.js"
